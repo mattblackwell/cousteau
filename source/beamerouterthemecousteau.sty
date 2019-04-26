@@ -1,0 +1,14 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerouterthemecousteau}[2019-04-25 Cousteau outer theme]
+
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamersize{text margin left=2em,text margin right=2em}
+
+% Requirement
+
+\setbeamertemplate{frametitle}{ \nointerlineskip
+ \begin{beamercolorbox}[sep=0.3cm, wd=\paperwidth]{frametitle} \vbox{}\vskip-1ex  \strut\insertframetitle\strut \vskip-0.8ex
+\end{beamercolorbox}
+}

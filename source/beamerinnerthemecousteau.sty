@@ -1,0 +1,63 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerinnerthemecousteau}[2019-04-25 Cousteau inner theme]
+
+
+\RequirePackage{etoolbox}
+
+
+\setbeamertemplate{title page}
+{
+\vbox{}
+\vfill
+\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+\ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+\ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+\ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+\vfill
+}
+
+\setbeamertemplate{title}{
+  \raggedright%
+  \usebeamerfont{title}%
+  \usebeamercolor[fg]{title}%
+  \inserttitle
+  \par%
+  \vspace*{0.5em}
+}
+
+\setbeamertemplate{subtitle}{
+  \raggedright%
+  \usebeamerfont{subtitle}%
+  \usebeamercolor[fg]{subtitle}%
+  \insertsubtitle
+  \par%
+  \vspace*{0.5em}
+}
+
+\setbeamertemplate{author}{
+  \usebeamerfont{author}%
+  \usebeamercolor[fg]{author}%
+  \insertauthor
+  \par%
+  \vspace*{0.25em}
+}
+
+\setbeamertemplate{date}{
+  \vspace*{2em}
+  \insertdate
+  \par%
+}
+
+\setbeamertemplate{institute}{
+  \insertinstitute
+  \par%
+}
+
+
+
+\setbeamertemplate{section page}{\vspace{4cm} \usebeamercolor[fg]{section number}\usebeamerfont{section number} \insertsectionnumber/ \usebeamercolor[fg]{section title}\usebeamerfont{section title} \insertsection}
+
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{itemize items}{\textbullet}
+

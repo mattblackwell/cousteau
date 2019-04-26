@@ -1,0 +1,110 @@
+\documentclass{beamer}
+\usepackage{appendixnumberbeamer}
+\usepackage{amssymb,amsmath}
+\usetheme{cousteau}
+
+
+\title{Cousteau: A Beamer Theme of Undersea Discovery and Adventure}
+\author{Matthew Blackwell}
+\institute{Harvard University}
+\date{April 26, 2019}
+
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{Table of contents}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}[fragile]{Using Cousteau}
+  Cousteau is a Beamer theme based on a nautical minimalism. Some parts of the theme are inspired by or are from the Metropolis theme. You can enable Cousteau by using the following commands:
+\begin{verbatim}
+   \documentclass{beamer}
+   \usetheme{cousteau}
+\end{verbatim}
+  The theme assumes you have the typefaces \textbf{Fira Sans}, \textbf{Fira Mono}, and \textbf{GFS Neohellenic Math} installed. XeTeX is required to compile a slide deck with Cousteau.
+\end{frame}
+
+
+\section{Elements}
+
+\begin{frame}[fragile]{Highlighting words}
+
+\begin{verbatim}
+There are several ways to highlight text. One way is to 
+\emph{emphasize} what you would like to say or to use 
+one of \alert{several} \alertb{accent} \alertc{colors}. 
+Another good option is \textbf{bold-face} type. 
+\end{verbatim}
+
+  \bigskip
+  
+  There are several ways to highlight text. One way is to \emph{emphasize} what you would like to say or to use one of \alert{several} \alertb{accent} \alertc{colors}. Another good option is \textbf{bold-face} type. 
+  
+\end{frame}
+
+\begin{frame}{Fonts}
+  \begin{itemize}
+    \item Regular
+    \item \textit{Italic}
+    \item \textsc{Small Caps}
+    \item \textbf{Bold}
+    \item \textbf{\textit{Bold Italic}}
+    \item \textbf{\textsc{Bold Small Caps}}
+    \item \texttt{Monospace}
+    \item \texttt{\textit{Monospace Italic}}
+    \item \texttt{\textbf{Monospace Bold}}
+    \item \texttt{\textbf{\textit{Monospace Bold Italic}}}
+  \end{itemize}
+
+  
+\end{frame}
+
+\begin{frame}{Blocks}
+
+  \begin{block}{Default block}
+    Block content.
+  \end{block}
+
+  \begin{alertblock}{Alert block}
+    Block content.
+  \end{alertblock}
+
+  \begin{exampleblock}{Example block}  
+    Block content.
+  \end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Math}
+  \[f(x) = \frac{1}{2\pi}\exp\left( -\frac{1}{2}x^2 \right)\]
+\end{frame}
+
+\begin{frame}{Quotes}
+  \begin{quote}
+    Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+  \end{quote}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Summary}
+  You can find the source for these demo slides and the entire Cousteau theme at:
+  \begin{center}
+    \url{http://github.com/mattblackwell/cousteau-theme/}
+  \end{center}
+  
+\end{frame}
+
+\appendix
+
+\begin{frame}{Appendix slides}
+
+  This is an appendix slide via the \texttt{appendixnumberbeamer} package and the \texttt{\\appendix} command. Note that the frame numbers are reset. 
+  
+\end{frame}
+
+\end{document}
