@@ -3,6 +3,7 @@
 \usepackage{amssymb,amsmath}
 \usetheme{cousteau}
 
+\usepackage[scale=2]{ccicons}
 
 \title{Cousteau: A Beamer Theme of Undersea Discovery and Adventure}
 \author{Matthew Blackwell}
@@ -20,7 +21,7 @@
 \section{Introduction}
 
 \begin{frame}[fragile]{Using Cousteau}
-  Cousteau is a Beamer theme based on a nautical minimalism. Some parts of the theme are inspired by or are from the Metropolis theme. You can enable Cousteau by using the following commands:
+  Cousteau is a Beamer theme based on a nautical minimalism. Some parts of the theme are inspired by or adapted from the Metropolis theme. You can enable Cousteau by using the following commands:
 \begin{verbatim}
    \documentclass{beamer}
    \usetheme{cousteau}
@@ -59,7 +60,27 @@ Another good option is \textbf{bold-face} type.
     \item \texttt{\textbf{Monospace Bold}}
     \item \texttt{\textbf{\textit{Monospace Bold Italic}}}
   \end{itemize}
+  
+\end{frame}
 
+\begin{frame}{Lists}
+  \begin{columns}
+    \column{0.5\textwidth}
+    Unordered list:
+    \begin{itemize}
+    \item RV Calypso
+    \item SP-350 Denise
+    \item Alcyone
+    \end{itemize}
+
+    \column{0.5\textwidth}
+    Numbered list:
+    \begin{enumerate}
+    \item Un
+    \item Deux
+    \item Trois
+    \end{enumerate}
+  \end{columns}
   
 \end{frame}
 
@@ -96,6 +117,13 @@ Another good option is \textbf{bold-face} type.
   \begin{center}
     \url{http://github.com/mattblackwell/cousteau-theme/}
   \end{center}
+
+  The theme is licensed under a
+  \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
+  Attribution-ShareAlike 4.0 International License}.
+
+  \begin{center}\ccbysa\end{center}
+
   
 \end{frame}
 

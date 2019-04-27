@@ -2,6 +2,9 @@
 
 Cousteau is a minimalist [Beamer][] theme with a light nautical touch. 
 
+![cousteau title slide](http://www.mattblackwell.org/images/cousteau.png)
+![cousteau title slide](http://www.mattblackwell.org/images/cousteau-highlight.png)
+
 ## Requirements
 
 Cousteau assumes you are using [XeTeX][] to typeset you slides and that the [Fira Sans][fira] fonts (including Fira Mono) are installed on your system. 
