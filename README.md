@@ -2,6 +2,8 @@
 
 Cousteau is a minimalist [Beamer][] theme with a light nautical touch. 
 
+Below you can see some example slides and for more, see the full set of [demo slides][demo].
+
 ![cousteau example slides](http://www.mattblackwell.org/images/cousteau-two.png)
 
 ## Requirements
@@ -33,3 +35,4 @@ The theme itself is licensed under a [Creative Commons Attribution-ShareAlike 4.
 [XeTeX]: http://xetex.sourceforge.net/
 [Metropolis]: https://github.com/matze/mtheme
 [iqss]: https://github.com/IQSS/iqss-beamer-theme
+[demo]: http://www.mattblackwell.org/files/software/cousteau-demo.pdf
