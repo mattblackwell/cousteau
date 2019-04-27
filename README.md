@@ -3,7 +3,6 @@
 Cousteau is a minimalist [Beamer][] theme with a light nautical touch. 
 
 ![cousteau title slide](http://www.mattblackwell.org/images/cousteau.png)
-![cousteau title slide](http://www.mattblackwell.org/images/cousteau-highlight.png)
 
 ## Requirements
 
