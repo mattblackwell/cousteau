@@ -110,6 +110,17 @@ Another good option is \textbf{bold-face} type.
   \end{quote}
 \end{frame}
 
+\begin{frame}[fragile]{Image frames}
+  Sometimes it can be useful to have an image take up the entire frame. Using \texttt{tikz}, Cousteau provides a an easy command to include a full screen image for a slide:
+\begin{verbatim}
+    \imageframe{kanagawa.jpg}
+\end{verbatim}
+See the next slide for the result of this command. \texttt{imageframe} will make the image as large as possible without cropping, so there may be some vertical or horizontal space. Crop images to 4:3 for best results. 
+\end{frame}
+
+\imageframe{kanagawa.jpg}
+
+ 
 \section{Conclusion}
 
 \begin{frame}{Summary}

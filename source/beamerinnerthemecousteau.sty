@@ -3,6 +3,7 @@
 
 
 \RequirePackage{etoolbox}
+\RequirePackage{tikz}
 
 
 \setbeamertemplate{title page}
@@ -61,3 +62,27 @@
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{itemize items}{\textbullet}
 
+
+\newcommand{\imageframe}[1]{%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[at = (current page.center), xshift = 0cm] (cover) {%
+        \includegraphics[keepaspectratio, width=\paperwidth,
+        height=\paperheight]{#1}};\end{tikzpicture}\end{frame}%
+}
+
+
+% By default, Beamer frames offer the |c| option to \textit{almost} vertically
+% center the text, but the placement is a little too high. To fix this, we
+% redefine the |c| option to equalize |\beamer@frametopskip| and
+% |\beamer@framebottomskip|. This solution was suggested by Enrico Gregorio in
+% an answer to \href{http://tex.stackexchange.com/questions/247826/}{this
+% Stack Exchange question}. Adapted from the Metropolis theme. 
+%
+\define@key{beamerframe}{c}[true]{% centered
+  \beamer@frametopskip=0pt plus 1fill\relax%
+  \beamer@framebottomskip=0pt plus 1fill\relax%
+  \beamer@frametopskipautobreak=0pt plus .4\paperheight\relax%
+  \beamer@framebottomskipautobreak=0pt plus .6\paperheight\relax%
+  \def\beamer@initfirstlineunskip{}%
+}
