@@ -1,0 +1,12 @@
+*.vrb
+*.toc
+*.snm
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.nav
+*.DS_Store
+
+demo/cousteau-demo.pdf
