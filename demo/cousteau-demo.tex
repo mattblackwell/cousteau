@@ -118,6 +118,25 @@ See the next slide for the result of this command. \texttt{imageframe} will make
 
 \imageframe{kanagawa.jpg}
 
+\begin{frame}{Test}
+  \begin{tikzpicture}[remember picture, overlay, shift=(current page.center), x=1cm, y=1cm]
+    \node[roundbox, col10 left, yshift = 3.25cm]  (de) {10\%};
+    \node[roundbox, col90 right, yshift = 3.25cm] (de) {90\%};
+    \node[roundbox, col20 left, yshift = 2.5cm]  (de) {20\%};
+    \node[roundbox, col80 right, yshift = 2.5cm] (de) {80\%};
+    \node[roundbox, col25 left, yshift = 1.75cm]  (de) {25\%};
+    \node[roundbox, col75 right, yshift = 1.75cm] (de) {75\%};
+
+    \node[roundbox, col33 left]  (de) {33\%};
+    \node[roundbox, col66 right] (de) {66\%};
+    \node[roundbox, col33 right, yshift = 1cm]  (de) {33\%};
+    \node[roundbox, col66 left, yshift = 1cm] (de) {66\%};
+    \node[roundbox, col10 right, yshift = -2cm]  (de) {10\%};
+    \node[roundbox, col90 left, yshift = -2cm] (de) {90\%};   
+    \end{tikzpicture}
+   
+\end{frame}
+
  
 \section{Conclusion}
 
@@ -145,3 +164,4 @@ See the next slide for the result of this command. \texttt{imageframe} will make
 \end{frame}
 
 \end{document}
+ 
