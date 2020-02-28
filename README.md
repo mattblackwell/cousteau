@@ -8,7 +8,7 @@ Below you can see some example slides and for more, see the full set of [demo sl
 
 ## Requirements
 
-Cousteau assumes you are using [XeTeX][] to typeset you slides and that the [Fira Sans][fira] fonts (including Fira Mono) are installed on your system. 
+If you are using  [XeTeX][] to typeset you slides, Cousteau assumes that the [Fira Sans][fira] fonts (including Fira Sans Compressed and Fira Mono) are installed on your system. If you are using pdflatex, Cousteau will use the `FiraSans`, `inconsolata`, and `newtxsf` packages for typefaces, with slightly less nice typography. 
 
 ## Installation
 

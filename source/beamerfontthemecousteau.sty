@@ -1,11 +1,38 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{beamerfontthemecousteau}[2019-04-25 Cousteau font theme]
 \RequirePackage{etoolbox}
-\RequirePackage{unicode-math}
-% Requirement
-
+\RequirePackage{ifxetex}
 
 \mode<presentation>{\beamer@suppressreplacementstrue}
+
+% Requirement
+\ifxetex
+\RequirePackage{unicode-math}
+%% checkfont and iffontsavaiable copied from the metropolis theme
+%% by Matthias Vogelgesang.
+%    Checks if a font is installed; if not, |fontsnotfound| is increased.
+\newcounter{fontsnotfound}
+\newcommand{\checkfont}[1]{%
+  \suppressfontnotfounderror=1%
+  \font\x = "#1" at 10pt
+  \selectfont
+  \ifx\x\nullfont%
+  \stepcounter{fontsnotfound}%
+  \fi%
+  \suppressfontnotfounderror=0%
+}
+%   Resets the |fontsnotfound| counter and calls |\checkfont| for each font in
+%   the comma separated list in the first argument.
+\newcommand{\iffontsavailable}[3]{%
+  \setcounter{fontsnotfound}{0}%
+  \expandafter\forcsvlist\expandafter%
+  \checkfont\expandafter{#1}%
+  \ifnum\value{fontsnotfound}=0%
+  #2%
+  \else%
+  #3%
+  \fi%
+}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=MatchLowercase}
 \setsansfont[ItalicFont={Fira Sans Book Italic},%
@@ -13,14 +40,28 @@
              BoldItalicFont={Fira Sans Bold Italic}]%
              {Fira Sans Book}%
 \setmainfont{Fira Sans Book}
-\setmathfont{GFS Neohellenic Math}
+\setmathfont{Fira Math}
 \setmonofont[BoldFont={Fira Mono Medium}]{Fira Mono}
-\newfontfamily\compthick{Fira Sans Compressed Bold}
-\newfontfamily\compthin{Fira Sans Compressed Thin}
+\iffontsavailable{Fira Sans Compressed}{%
+  \newfontfamily\compthick{Fira Sans Compressed Bold}
+  \newfontfamily\compthin{Fira Sans Compressed Thin}
+}{%
+  \newfontfamily\compthick{Fira Sans Bold}
+  \newfontfamily\compthin{Fira Sans Thin}
+}
 \newfontfamily\thin{Fira Sans Light}
-
 \setbeamerfont{frametitle}{family=\compthick, size={\fontsize{20}{20}}}
 \setbeamerfont{title}{family=\compthick, size={\fontsize{36}{36}}}
 %\setbeamerfont{author}{family=\thin}
 \setbeamerfont{section number}{family=\compthick, size={\fontsize{36}{36}}}
 \setbeamerfont{section title}{family=\compthin, size={\fontsize{36}{36}}}
+\else
+\RequirePackage[sfdefault, scale=0.85, book]{FiraSans}
+\RequirePackage{inconsolata}
+\RequirePackage{newtxsf}
+\setbeamerfont{frametitle}{family=\firasemibold, size=\LARGE}
+\setbeamerfont{title}{family=\firasemibold, size=\Huge}
+\setbeamerfont{section number}{family=\firasemibold, size=\Huge}
+\setbeamerfont{section title}{family=\firathin, size=\Huge}
+\fi
+
