@@ -114,6 +114,8 @@
 
 \def\cousteau@gridgap{0.03\textwidth}
 \def\cousteau@gridtextgap{0.02\textwidth}
+
+%% widths for tikz objects
 \tikzset{%
   is-10/.style = {minimum width = 0.1\textwidth - \cousteau@gridgap,
     text width = 0.1\textwidth - \cousteau@gridgap - \cousteau@gridtextgap},
@@ -148,24 +150,25 @@
 }
 
 
-
+%% 33%/66% columns
 \tikzset{col33 left/.style={at = (current page.west), is-33,
-    xshift = {\beamer@leftmargin+0.16666\textwidth}}}
+    xshift = {\beamer@leftmargin + 0.16666\textwidth}}}
 \tikzset{col66 right/.style={at = (current page.east),
-    xshift = {-\beamer@leftmargin-0.3333\textwidth},
+    xshift = {-\beamer@leftmargin - 0.3333\textwidth},
     minimum width = 0.66\textwidth - 0.03\textwidth,
     text width = 0.66\textwidth - 0.05\textwidth}}
 \tikzset{col33 right/.style={at = (current page.east),
-    xshift = {-\beamer@leftmargin-0.16666\textwidth},
+    xshift = {-\beamer@leftmargin - 0.16666\textwidth},
     minimum width = 0.333\textwidth - 0.03\textwidth,
     text width = 0.33\textwidth - 0.05\textwidth}}
 \tikzset{col66 left/.style={at = (current page.west),
-    xshift = {\beamer@leftmargin+0.3333\textwidth},
+    xshift = {\beamer@leftmargin + 0.3333\textwidth},
     minimum width = 0.66\textwidth - 0.03\textwidth,
     text width = 0.66\textwidth - 0.05\textwidth}}
 \tikzset{col33 center/.style={at = (current page.center), is-33}}
 \tikzset{col66 center/.style={at = (current page.center), is-66}}
 
+%% 10/90 columns
 \tikzset{col10 left/.style={at = (current page.west),
     xshift = {\beamer@leftmargin+0.05\textwidth},
     minimum width = 0.1\textwidth - 0.03\textwidth,
@@ -183,6 +186,7 @@
     minimum width = 0.9\textwidth - 0.03\textwidth,
     text width = 0.9\textwidth - 0.05\textwidth}}
 
+%% 80/20 
 \tikzset{col20 left/.style={at = (current page.west),
     xshift = {\beamer@leftmargin+0.1\textwidth},
     minimum width = 0.2\textwidth - 0.03\textwidth,
@@ -200,6 +204,7 @@
     minimum width = 0.8\textwidth - 0.03\textwidth,
     text width = 0.8\textwidth - 0.05\textwidth}}
 
+%% 25/75
 \tikzset{col25 left/.style={at = (current page.west),
     xshift = {\beamer@leftmargin+0.125\textwidth},
     minimum width = 0.25\textwidth - 0.03\textwidth,
@@ -217,6 +222,7 @@
     minimum width = 0.75\textwidth - 0.03\textwidth,
     text width = 0.75\textwidth - 0.05\textwidth}}
 
+%% 50/50
 \tikzset{col50 left/.style={at = (current page.west), is-50,
     xshift = {\beamer@leftmargin+0.25\textwidth}}}
 \tikzset{col50 right/.style={at = (current page.east), is-50,
