@@ -8,5 +8,6 @@
 *.out
 *.nav
 *.DS_Store
-
+*.synctex.gz
+*.xdv
 demo/cousteau-demo.pdf
