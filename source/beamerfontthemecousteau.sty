@@ -41,6 +41,14 @@
              {Fira Sans Book}%
 \setmainfont{Fira Sans Book}
 \setmonofont[BoldFont={Fira Mono Medium}]{Fira Mono}
+\setmathfont{latinmodern-math.otf}
+\setmathfont[%
+range={it/{latin,Latin,num}->sfit,%
+  up/{latin,Latin,num}->sfup,%
+  bfup/{latin,Latin,num}->bfsfup,
+  bfit/{latin,Latin,num}->bfsfit}]{latinmodern-math.otf}
+\setmathfont[range={it/{greek,Greek},up/{greek,Greek}}]{GFSNeohellenicMath.otf}
+% \setmathfont{Fira Math}
 \iffontsavailable{Fira Sans Compressed}{%
   \newfontfamily\compthick{Fira Sans Compressed Bold}
   \newfontfamily\compthin{Fira Sans Compressed Thin}
