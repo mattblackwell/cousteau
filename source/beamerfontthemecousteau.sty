@@ -40,18 +40,21 @@
              BoldItalicFont={Fira Sans Bold Italic}]%
              {Fira Sans Book}%
 \setmainfont{Fira Sans Book}
-\setmonofont[BoldFont={Fira Mono Medium}]{Fira Mono}
-\setmathfont{latinmodern-math.otf}
+\setmonofont[BoldFont={Fira Mono Medium}, Mapping=tex-ansi]{Fira Mono}
+%\setmathfont[Scale=MatchUppercase]{GFSNeohellenicMath.otf}
+\setmathfont[Scale=MatchUppercase]{latinmodern-math.otf}
 \setmathfont[%
 range={it/{latin,Latin,num}->sfit,%
   up/{latin,Latin,num}->sfup,%
   bfup/{latin,Latin,num}->bfsfup,
-  bfit/{latin,Latin,num}->bfsfit}]{latinmodern-math.otf}
-\setmathfont[range={it/{greek,Greek},up/{greek,Greek}}]{GFSNeohellenicMath.otf}
+  bfit/{latin,Latin,num}->bfsfit},
+  Scale=MatchUppercase]{latinmodern-math.otf}
+\setmathfont[range={it/{greek,Greek},up/{greek,Greek},bfup/{greek,Greek},bfit/{greek,Greek}},
+  Scale=1]{GFSNeohellenicMath.otf}
 % \setmathfont{Fira Math}
-\iffontsavailable{Fira Sans Compressed}{%
-  \newfontfamily\compthick{Fira Sans Compressed Bold}
-  \newfontfamily\compthin{Fira Sans Compressed Thin}
+\iffontsavailable{Fira Sans Condensed}{%
+  \newfontfamily\compthick{Fira Sans Condensed Bold}
+  \newfontfamily\compthin{Fira Sans Condensed Thin}
 }{%
   \newfontfamily\compthick{Fira Sans Bold}
   \newfontfamily\compthin{Fira Sans Thin}
@@ -72,3 +75,5 @@ range={it/{latin,Latin,num}->sfit,%
 \setbeamerfont{section title}{family=\firathin, size=\Huge}
 \fi
 
+%% maybe make this an option
+\setbeamerfont{standout}{family=\compthick, size={\fontsize{36}{36}}}
