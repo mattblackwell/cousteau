@@ -79,6 +79,59 @@
         height=\paperheight]{#1}};\end{tikzpicture}\end{frame}%
 }
 
+%% from metropolis theme by Matthias Vogelgesang https://github.com/matze/mtheme
+\providebool{cousteau@standout}
+\define@key{beamerframe}{standout}[true]{%
+  \booltrue{cousteau@standout}
+  \begingroup
+    \setkeys{beamerframe}{c}
+    \setkeys{beamerframe}{noframenumbering}
+    \ifbeamercolorempty[bg]{palette primary}{
+      \setbeamercolor{background canvas}{
+        use=palette primary,
+        bg=-palette primary.fg
+      }
+    }{
+      \setbeamercolor{background canvas}{
+        use=palette primary,
+        bg=palette primary.bg
+      }
+    }
+    \setbeamercolor{local structure}{
+      fg=palette primary.fg
+    }
+    \usebeamercolor[fg]{palette primary}
+}
+%    \end{macrocode}
+%
+%    Then we just have to close the group after the standout slide is finished
+%    in order to restore the colours and fonts for the rest of the
+%    presentation. Unfortunately, we cannot use \AfterEndEnvironment{frame} for
+%    this (see \url{http://tex.stackexchange.com/questions/226319/}).
+%    Instead, we prepend the |\endgroup| to |\beamer@reseteecodes|, which is run
+%    exactly once at the end of each slide.
+%
+%    \begin{macrocode}
+  \pretocmd{\beamer@reseteecodes}{%
+    \ifbool{cousteau@standout}{
+      \endgroup
+      \boolfalse{cousteau@standout}
+    }{}
+  }{}{}
+%    \end{macrocode}
+%
+%    We set the fonts and the \centering alignment on the inner content,
+%    in such a way that the speaker's note layout isn't affected by the custom
+%    formatting.
+%
+%    \begin{macrocode}
+  \AtBeginEnvironment{beamer@frameslide}{
+    \ifbool{cousteau@standout}{
+      \centering
+      \usebeamerfont{standout}
+    }{}
+  }
+
 
 % By default, Beamer frames offer the |c| option to \textit{almost} vertically
 % center the text, but the placement is a little too high. To fix this, we
